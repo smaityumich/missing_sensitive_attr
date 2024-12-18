@@ -1,6 +1,6 @@
 import numpy as np
 
-def demographic_metrics(y_true, y_pred, y_protected):
+def DP_metrics(y_true, y_pred, y_protected):
     correct = y_true==y_pred
     correct_pos, correct_neg = correct[y_protected == 1].mean(), correct[y_protected == 0].mean()
     idx_good_class = np.where(y_true == 1)[0]
